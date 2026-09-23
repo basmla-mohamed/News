@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--META-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Basmala" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>News</title>
+
+    <!--LINKING-->
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/keyframes.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/index.responsive.css" />
+    <link id="favicon" rel="icon" href="" />
+  </head>
+
+  <body>
+    <div id="find">
+      <div class="filter py-5">
+        <h1 class="mb-5">News Now</h1>
+        <div class="container">
+          <form>
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="item">
+                  <div class="mb-3">
+                    <label for="category" class="form-label">Category</label>
+                    <div class="selected">
+                      <select class="form-control" id="category" name="category">
+                        <option value="business" selected>Business</option>
+                        <option value="health">Health</option>
+                        <option value="science">Science</option>
+                        <option value="sports">Sports</option>
+                        <option value="technology">Technology</option>
+                      </select>
+                      <i class="fa-solid fa-caret-down select-icon"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="item">
+                  <div class="mb-3">
+                    <label for="search" class="form-label">Search</label>
+                    <input type="text" class="form-control" id="search" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-success w-100 mt-3">Filter</button>
+          </form>
+        </div>
+      </div>
+      <div class="data py-5">
+        <div class="container">
+          <div class="row"></div>
+          <nav aria-label="Page navigation example" class="d-flex justify-content-center align-items-center mt-5">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!--LINKING JS-->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/notes.js"></script>
+  </body>
+</html>

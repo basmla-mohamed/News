@@ -1,0 +1,139 @@
+/*   SESSION 24  */
+/*
+
+1-why we use sass?
+    -because css dont have modern featured it make the project easier such as
+      -forLoop
+      -if
+      -nesting
+
+2-the browser dont understand any thing expect html , css , javascript
+    -because that we use compilor
+
+3-Declaring variables must start by $
+
+4-error 
+  .box { color: $main; }
+  $main: red;
+  (because we declare the variable after use it)
+the correct
+  $main: red;
+  .box { color: $main; }
+
+5-error
+  .btn {
+    & .icon { margin-right: 5px; }
+        }
+the correct
+    .btn {
+      .icon { margin-right: 5px; }
+          }
+
+6-we use & only i want to do someThing in the element i'm on it
+
+7-false
+    .btn {
+     :hover { color: red; }
+         }
+because that mean any elemnt in btn
+
+8-the correct
+      .btn { 
+        &:hover { color: red; } 
+          }
+because & mean .btn (the element i'm on it)
+
+9-@import to link secoundary files to main file(index.scss) => debrecated (not use mostly)
+
+10-@use to link secoundary files to main file(index.scss) => prefer using it 
+
+11- we have a problem with @import and @use 
+    -the problem it's when i select any variable i create it in secoundry file when i want to use it in (index.scss)
+    -we must put colors.$mainColor in every time i want to use it
+
+12- the solution of this problem 
+    @use "Abstract/_colors.scss" as *
+    because that we can type $mainColor instead of colors.$mainColor
+
+13-the main file index.scss
+the secoundary files its must start by underscore_
+
+14-index.scss the final file use in css
+secoundary files all use in another sass files
+
+15-wrong
+    @if $theme == dark { background: black; }
+    @if $theme == light { background: white; }
+correct
+    @if $theme == dark { background: black; }
+    @else { background: white; }
+
+16-forLoop and if condition and else must start by @
+@if
+@for
+@each
+
+17-@for to loop generally
+
+18-@each to loop on thing have key and value such as map
+
+19-list have a key only
+such :    $list : (red , green , blue)
+.box{
+color: nth($list , 1);
+}
+
+20 map take key and value
+such :   $map : ("red ": red,
+"green" : green;);
+.box{
+color : map-get($map , "red");
+}
+
+21- map we use i by map-get(variableName , value)
+
+22-list we use it by nth(variableName , number)
+    note: the number start by 1 not 0
+
+23-we can use in sass comaprison and arithmatic operators
+
+24-$sizes(40, 50, 60)
+@for $i from 1 to 3 {
+.box #{$i}{
+font-size : nth($sizes ,$i) * 1px;
+}
+  it make we loop on first and second
+
+25-24-$sizes(40, 50, 60)
+@for $i from 1 through 3 {
+.box #{$i}{
+font-size : nth($sizes ,$i) * 1px;
+}
+  it make we loop on first and second and third
+
+26-math Operations:
+ Sass support mathematic operators such +, -, *, /, and % to calculate sizes and padding 
+
+27-Global vs Local
+   Variables defined inside a selector are local to that block 
+   but variables defined outside are global
+
+28-Mixins Created with @mixin they allow you to define groups of CSS declarations that you can reuse it
+the main  use => in display : flex;
+
+
+29-Extensions .scss uses braces {} like CSS => the best
+    but .sass uses spaces and indents
+
+30-organization in files order
+    name files with an underscore like colors.scss so they don't take many time to run(the problem show directly in large files)
+    importing: Use @use 'filePath' to combine smaller Sass files into your main stylesheet
+    forward : use it in the file of shares.scss 
+
+31- shares.scss we type on it all secoundary files i linked
+
+32- in index.scss we link shares.scss that contain all secoundary files i linked
+
+*/
+
+/*# sourceMappingURL=index.scss.map */
